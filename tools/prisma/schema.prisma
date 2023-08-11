@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Vehicle {
+  id            Int      @id @default(autoincrement())
+  class         String
+  type          String
+  power         Int
+  color         String
+  metallicColor Boolean
+  colorId       Int
+  basePrice     Int
+  extras        String[]
+}
+
+model ConfiguratedVehicle {
+  id            Int      @id @default(autoincrement())
+  price         Int
+  type          String
+  class         String
+  color         String
+  metallicColor Boolean
+  colorId       Int
+  power         Int
+  extras        String[]
+}
+
+model Extra {
+  id    Int    @id @default(autoincrement())
+  name  String
+  price Int
+}
+
+model Motor {
+  id    Int @id @default(autoincrement())
+  power Int
+  price Int
+}
+
+model Color {
+  id       Int     @id @default(autoincrement())
+  color    String
+  metallic Boolean
+  price    Int
+}

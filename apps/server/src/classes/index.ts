@@ -1,0 +1,6 @@
+export * from './extraDTO'
+export * from './vehicleDTO'
+export * from './colorDTO'
+export * from './motorDTO'
+export * from './vehicle'
+export * from './vehicleCreationDTO'
