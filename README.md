@@ -2,6 +2,12 @@ sorry absolutely no time to develop this test. My current freelance project has 
 
 For samples please look up the other projects within the repository
 
+https://github.com/WeissD-10/calendar
+
+https://github.com/WeissD-10/sse
+
+https://github.com/WeissD-10/Memo-app
+
 ## Build the app, BE is not dockerized yet
 get the containers `started docker-compose up -d` 
 `npm run be:db:migrate` to migrate db
