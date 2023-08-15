@@ -8,6 +8,8 @@ https://github.com/WeissD-10/sse
 
 https://github.com/WeissD-10/Memo-app
 
+Those repositorys where for project interviews, done in around 3,5 - 4 hours
+
 ## Build the app, BE is not dockerized yet
 get the containers `started docker-compose up -d` 
 `npm run be:db:migrate` to migrate db
