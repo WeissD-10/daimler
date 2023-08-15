@@ -19,7 +19,7 @@ async function bootstrap() {
     .build();
   app.setGlobalPrefix('api');
   app.enableCors({
-    origin: 'http://localhost:4200',
+    origin: ['http://localhost:4200', 'http://localhost:8080', 'http://client']
   });
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);

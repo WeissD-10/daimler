@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "be:db:start": "docker-compose up -d",
+    "be:db:start": "docker-compose up -d postgres",
     "be:db:studio": "prisma studio --schema=tools/prisma/schema.prisma",
     "be:db:seed": "ts-node tools/prisma/seeds/seedDB",
     "be:db:migrate": "prisma migrate dev --schema=tools/prisma/schema.prisma",
     "be:db:reset": "prisma migrate reset --schema=tools/prisma/schema.prisma",
     "frontend:container-build": "docker build -t client ./apps/client/",
     "build:server": "nest build",
-    "build:client": "ng build"
+    "build:client": "ng build",
+    "start:prod": "node ./dist/apps/server/main.js"
   },
   "private": true,
   "prisma": {

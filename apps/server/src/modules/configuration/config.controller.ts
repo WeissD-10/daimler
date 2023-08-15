@@ -7,7 +7,7 @@ import {
 } from '@nestjs/common';
 import { ConfigService } from './config.service';
 import { VehicleCreationDTO, ColorDTO, ExtraDTO, MotorDTO } from '../../classes';
-import { ApiExtraModels, ApiOkResponse, ApiOperation, ApiResponse, getSchemaPath } from '@nestjs/swagger';
+import { ApiExtraModels, ApiOperation, ApiResponse } from '@nestjs/swagger';
 
 @Controller('configs')
 export class ConfigController {

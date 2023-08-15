@@ -14,7 +14,6 @@ describe('EnvironmentService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
-
   it('should receive the correct environment',() => {
     expect(service.apiHost).toBe(environment.apiHost);
     expect(service.production).toBe(environment.production);

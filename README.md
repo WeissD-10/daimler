@@ -1,8 +1,24 @@
-## Start the app
-get the containers started docker-compose up -d 
-navigate to apps/server
-npm run be:db:migrate to migrate db
-npm run be:db:seed to fill the db with mock data
+sorry absolutely no time to develop this test. My current freelance project has lots of troubles
+
+For samples please look up the other projects within the repository
+
+## Build the app, BE is not dockerized yet
+get the containers `started docker-compose up -d` 
+`npm run be:db:migrate` to migrate db
+`npm run be:db:seed` to fill the db with mock data
+
+`nx run server:build` build BE
+
+`npm run start:prod` start BE
+
+and navigate to http://localhost:8080 for the frontend
+
+## Serve the app
+
+docker-compose up -d postgres
+`npm run be:db:migrate` to migrate db
+`npm run be:db:seed` to fill the db with mock data
+
 To start the development server run `nx serve server`. Open your browser and navigate to http://localhost:3000/api for the swagger.
 
 Frontend isn't finished because i set a timelimit of 4 hours for myself and had to much fun with the BE

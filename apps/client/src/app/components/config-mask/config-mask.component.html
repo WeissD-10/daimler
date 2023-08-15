@@ -1,0 +1,44 @@
+<!-- <div class="container">
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Klasse</mat-label>
+      <mat-select formControlName="class">
+        <mat-option *ngFor="let vehicle of vehicles$ | async" [value]="vehicle.class">{{vehicle.class}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field >
+      <mat-label >Select</mat-label>
+      <mat-select [disabled]="!selectedVehicle.class" formControlName="type">
+        <mat-option *ngFor="let vehicle of vehicles$ | async" [value]="vehicle.type">{{vehicle.type}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select</mat-label>
+      <mat-select [disabled]="!selectedVehicle?.class" formControlName="power">
+        <mat-option *ngFor="let vehicle of vehicles$ | async" [value]="vehicle.power">{{vehicle.power}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Metallic Lack</mat-label>
+      <mat-select [disabled]="!selectedVehicle?.class"  formControlName="metallicColor">
+        <mat-option value="true">Metallic Lack</mat-option>
+        <mat-option value="false">Unilack</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div formArrayName="extras">
+      <p *ngFor="let extra of extras.controls">
+        {{ extra.value}}
+      </p>
+    </div>
+    <mat-select [disabled]="!selectedVehicle?.class" (selectionChange)="selectExtra($event.value)">
+      <mat-option *ngFor="let extra of extras$ | async" [value]="extra"> {{ extra.name + ' (' + extra.price + '€)'}}
+      </mat-option>
+    </mat-select>
+    <button disabled="" mat-button (click)="addExtra()">Extra hinzufügen</button>
+    <div *ngIf="selectedVehicle">
+      <p>
+        Endpreis: {{selectedVehicle.basePrice}}
+      </p>
+    </div>
+  </form>
+</div> -->

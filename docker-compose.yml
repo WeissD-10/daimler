@@ -1,5 +1,16 @@
 version: '3'
 services:
+  reverseproxy:
+    container_name: reverseproxy
+    build:
+      context: ./
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    networks:
+      - application
+
   postgres:
     container_name: postgres
     image: postgres
@@ -8,34 +19,38 @@ services:
       POSTGRES_PASSWORD: prisma
     ports:
       - "5432:5432"
-
-  server:
-    container_name: server
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    env_file:
-      - .env
-    ports:
-      - "3000:3000"
-    depends_on:
-      - postgres
     networks:
-      - backend
+      - application
 
-  frontend:
+  # server:
+  #   container_name: server
+  #   build:
+  #     context: ./
+  #     dockerfile: server.dockerfile
+  #   volumes:
+  #     - ./src:/app/src
+  #   ports:
+  #     - '3000:3000'
+  #   env_file:
+  #     - .env
+  #   depends_on:
+  #     - postgres
+  #     - reverseproxy
+  #   networks:
+  #     - application
+
+  client:
     container_name: client
+    depends_on:
+      - reverseproxy
     build:
       context: ./
-    ports:
-      - 4200:4200
+      dockerfile: client.dockerfile
     volumes:
       - /app
       - /app/node_modules
     networks:
-      - frontend
-      - backend
+      - application
 
 networks:
-  frontend:
-  backend:
+  application:
