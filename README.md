@@ -1,6 +1,8 @@
 Mostly BE repo.
 
-Little bit of Dockerization
+Little bit of Dockerization.
+
+~4h worktime
 
 better samples.
 
