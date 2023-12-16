@@ -29,7 +29,7 @@ docker-compose up -d postgres
 
 To start the development server run `nx serve server`. Open your browser and navigate to http://localhost:3000/api for the swagger.
 
-Frontend isn't finished because i set a timelimit of 4 hours for myself and had to much fun with the BE
+Frontend isn't finished.
 Start the Frontend with  `nx serve client` and navigate to http://localhost:4200
 
 
