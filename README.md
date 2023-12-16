@@ -1,14 +1,14 @@
-sorry absolutely no time to develop this test. My current freelance project has lots of troubles
+Mostly BE repo.
 
-For samples please look up the other projects within the repository
+Little bit of Dockerization
+
+better samples.
 
 https://github.com/WeissD-10/calendar
 
 https://github.com/WeissD-10/sse
 
 https://github.com/WeissD-10/Memo-app
-
-Those repositorys where for project interviews, done in around 3,5 - 4 hours
 
 ## Build the app, BE is not dockerized yet
 get the containers `started docker-compose up -d` 
